@@ -5,3 +5,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Smooth fade for colors when theme changes */
+html, body, div, section, main, header, footer, p, h1, h2, h3, h4, h5, h6, a, button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: ensures child elements transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}

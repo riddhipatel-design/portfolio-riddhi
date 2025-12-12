@@ -46,8 +46,8 @@ export default function Skills() {
           <div key={i} className="flex flex-col">
             <div
               className="w-16 h-16 flex items-center justify-center 
-              bg-white dark:bg-slate-800 rounded-xl shadow-md 
-              border border-slate-200 dark:border-slate-700 
+              bg-white dark:bg-slate-200 rounded-xl shadow-md 
+              border border-slate-200 dark:border-slate-200 
               overflow-hidden
               transition-transform duration-300 hover:scale-110"
             >

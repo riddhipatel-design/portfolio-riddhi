@@ -1,3 +1,6 @@
+
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+
 export default function Contact() {
   return (
     <section id="contact" className="pt-14 pb-20">
@@ -7,7 +10,10 @@ export default function Contact() {
         Feel free to reach out for collaboration or opportunities!
       </p>
 
-      <p className="text-lg">📧 riddhipatel2525@gmail.com</p>
+      <p className="text-lg flex items-center gap-2">
+        <EmailOutlinedIcon fontSize="small" />
+        riddhipatel2525@gmail.com
+      </p>
     </section>
   );
 }
