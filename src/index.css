@@ -15,3 +15,11 @@ html, body, div, section, main, header, footer, p, h1, h2, h3, h4, h5, h6, a, bu
 * {
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.85);
+}

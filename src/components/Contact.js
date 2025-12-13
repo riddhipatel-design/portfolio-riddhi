@@ -12,7 +12,7 @@ export default function Contact() {
 
       <p className="text-lg flex items-center gap-2">
         <EmailOutlinedIcon fontSize="small" />
-        riddhipatel2525@gmail.com
+       <a href="mailto:riddhipatel2525@gmail.com" className="underline">riddhipatel2525@gmail.com</a>
       </p>
     </section>
   );

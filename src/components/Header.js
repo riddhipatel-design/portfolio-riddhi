@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -12,6 +12,14 @@ export default function Header({ darkMode, setDarkMode }) {
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
+// inside Header
+useEffect(() => {
+  function onKey(e) {
+    if (e.key === "Escape") setMobileMenuOpen(false);
+  }
+  document.addEventListener("keydown", onKey);
+  return () => document.removeEventListener("keydown", onKey);
+}, []);
 
   return (
    <header className="w-full sticky top-0 z-30 bg-gradient-to-b from-white to-gray-100 dark:from-[#0f172a] dark:to-[#1e293b] shadow-xl shadow-neutral">
@@ -52,14 +60,16 @@ export default function Header({ darkMode, setDarkMode }) {
     <button
       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       className="sm:hidden p-2 ml-4 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-      aria-label="Toggle menu"
+      aria-controls="mobile-menu"
+  aria-expanded={mobileMenuOpen}
+  aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
     >
       {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
     </button>
 
     {/* Mobile Menu */}
     {mobileMenuOpen && (
-      <nav className="sm:hidden absolute top-full right-0 w-full bg-white dark:bg-[#0f172a] shadow-md flex flex-col gap-4 px-6 py-4">
+      <nav className="sm:hidden absolute top-full right-0 w-full bg-white dark:bg-[#0f172a] shadow-md flex flex-col gap-4 px-6 py-4" id="mobile-menu" aria-hidden={!mobileMenuOpen}>
         {menuItems.map((item, idx) => (
           <a
             key={idx}

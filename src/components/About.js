@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import resumePdf from "url:../assets/Riddhi_resume.pdf";
+
 
 export default function About() {
   return (
@@ -33,7 +35,7 @@ export default function About() {
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
             I specialize in building clean, accessible, efficient user
             interfaces with React, HTML, CSS, JavaScript and modern workflows.
-            With 5 years of experience in web production and digital learning,
+            With over 4 years of experience in web production and digital learning,
             I focus on responsive layouts, AODA/WCAG compliance, and
             collaborative, agile design practices. I develop interactive web
             and e-learning experiences, reskin and enhance React projects,
@@ -44,8 +46,10 @@ export default function About() {
           {/* Resume Button Inside About Section */}
           <div className="mt-8">
          <a
-  href="/resume.pdf"
-  download
+  href={resumePdf}
+  download="Riddhi_resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
   className="
     inline-flex items-center gap-2 px-6 py-3 rounded-xl
     text-white font-semibold

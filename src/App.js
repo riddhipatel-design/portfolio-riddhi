@@ -27,12 +27,20 @@ export default function App() {
   return (
     // top-level controls global bg + text for both modes
     <div className="min-h-screen bg-[#f8fafc] text-slate-800 dark:bg-[#0f172a] dark:text-slate-100 transition-colors duration-300">
+      {/* Skip Link for accessibility */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4
+             bg-white dark:bg-slate-800 p-2 rounded z-50 shadow"
+      >
+        Skip to main content
+      </a>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* WIDE centered container, but content inside will be left-aligned */}
       <main className="max-w-6xl mx-auto px-6">
         <About />
-       
+
         <Skills />
         <Projects />
         <Contact />

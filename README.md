@@ -1,23 +1,10 @@
-# Riddhi Patel — Portfolio
+# Riddhi Patel – Portfolio
 
-A simple, clean, minimal portfolio website built using **React** and **Parcel**.  
-Designed to be fast, responsive, and easy to customize.
+Personal front-end developer portfolio showcasing responsive, accessible web projects.
 
----
+🔗 Live: https://ripatelportfolio.netlify.app/
 
-## 🚀 Features
+**Tech:** React, JavaScript, HTML, CSS, Tailwind CSS, Parcel  
+**Features:** Responsive design, Light/Dark mode, Accessibility (WCAG/AODA), Smooth animations
 
-- Minimal and clean single-page layout  
-- Built with React (no complex boilerplate)  
-- Styled with plain CSS  
-- Deployed anywhere (Netlify, GitHub Pages, Vercel)  
-- Super fast Parcel bundler  
-
----
-
-## 🛠️ Tech Stack
-
-- **React 18**
-- **Parcel Bundler**
-- **JavaScript (ES6+)**
-- **CSS3**
+📧 riddhipatel2525@gmail.com
